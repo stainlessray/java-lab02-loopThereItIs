@@ -4,9 +4,14 @@ import org.junit.Assert;
 import org.junit.Test;
 
 
+
+
 public class TableUtilitiesTest {
     @Test
     public void testGetLargeMultiplicationTable() {
+        // : Given
+        int width = 10;
+
         String expected =
                 "  1 |  2 |  3 |  4 |  5 |  6 |  7 |  8 |  9 | 10 |\n" +
                 "  2 |  4 |  6 |  8 | 10 | 12 | 14 | 16 | 18 | 20 |\n" +
@@ -19,13 +24,16 @@ public class TableUtilitiesTest {
                 "  9 | 18 | 27 | 36 | 45 | 54 | 63 | 72 | 81 | 90 |\n" +
                 " 10 | 20 | 30 | 40 | 50 | 60 | 70 | 80 | 90 |100 |\n";
 
-        String actual = TableUtilities.getLargeMultiplicationTable();
+        // : When
+        String actual = TableUtilities.getLargeMultiplicationTable(width);
+        // : Then
         Assert.assertEquals(expected, actual);
     }
 
 
     @Test
     public void testGetSmallMultiplicationTable() {
+        int width = 5;
         String expected =
                         "  1 |  2 |  3 |  4 |  5 |\n" +
                         "  2 |  4 |  6 |  8 | 10 |\n" +
@@ -33,12 +41,13 @@ public class TableUtilitiesTest {
                         "  4 |  8 | 12 | 16 | 20 |\n" +
                         "  5 | 10 | 15 | 20 | 25 |\n";
 
-        String actual = TableUtilities.getSmallMultiplicationTable();
+        String actual = TableUtilities.getSmallMultiplicationTable(width);
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void testGetMultiplicationTable() {
+        int width = 20;
         String expected =
                 "  1 |  2 |  3 |  4 |  5 |  6 |  7 |  8 |  9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 |\n" +
                 "  2 |  4 |  6 |  8 | 10 | 12 | 14 | 16 | 18 | 20 | 22 | 24 | 26 | 28 | 30 | 32 | 34 | 36 | 38 | 40 |\n" +
@@ -60,7 +69,7 @@ public class TableUtilitiesTest {
                 " 18 | 36 | 54 | 72 | 90 |108 |126 |144 |162 |180 |198 |216 |234 |252 |270 |288 |306 |324 |342 |360 |\n" +
                 " 19 | 38 | 57 | 76 | 95 |114 |133 |152 |171 |190 |209 |228 |247 |266 |285 |304 |323 |342 |361 |380 |\n" +
                 " 20 | 40 | 60 | 80 |100 |120 |140 |160 |180 |200 |220 |240 |260 |280 |300 |320 |340 |360 |380 |400 |\n";
-        String actual = TableUtilities.getMultiplicationTable(20);
+        String actual = TableUtilities.getMultiplicationTable(width);
         Assert.assertEquals(expected, actual);
     }
 
