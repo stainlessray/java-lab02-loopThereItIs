@@ -196,7 +196,7 @@ public class NumberUtilitiesTest {
         int step = 5;
 
         // : When
-        String actual = NumberUtilities.getOddNumbers(start, stop);
+        String actual = NumberUtilities.getOddNumbers(start, stop, step);
 
         // : Then
         Assert.assertEquals(expected, actual);
