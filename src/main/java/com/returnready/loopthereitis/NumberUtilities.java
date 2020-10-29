@@ -22,17 +22,31 @@ public class NumberUtilities {
         tempString = "";
         for (int i = 0; i < stop; i++) {
             tempString = tempString + i ;
-        }//
+        }
         return tempString;
     }
 
     public static String getRange(int start, int stop) {
-        return null;
+        String tempString;
+        tempString = "";
+        for (int j = start; j < stop; j++) {
+            tempString = tempString + j ;
+        }
+        //System.out.println(tempString.length()/3);
+        return tempString;
+
     }
 
 
     public static String getRange(int start, int stop, int step) {
-        return null;
+        String tempString;
+        tempString = "";
+        // stop = stop minus step
+        for (int i = start; i < stop; i += step) {
+        tempString = tempString + i ;
+        }
+        System.out.println(tempString.length()/10);
+        return tempString;
     }
 
 
