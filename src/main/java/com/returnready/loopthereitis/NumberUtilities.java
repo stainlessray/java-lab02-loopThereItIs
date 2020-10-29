@@ -3,7 +3,7 @@ package com.returnready.loopthereitis;
 
 public class NumberUtilities {
     public static String getEvenNumbers(int start, int stop) {
-        return null;
+        return null; // ;
     }
 
 
@@ -16,8 +16,14 @@ public class NumberUtilities {
         return null;
     }
 
-    public static String getRange(int start) {
-        return null;
+    public static String getRange(int stop) {
+        //
+        String tempString;
+        tempString = "";
+        for (int i = 0; i < stop; i++) {
+            tempString = tempString + i ;
+        }
+        return tempString;
     }
 
     public static String getRange(int start, int stop) {
