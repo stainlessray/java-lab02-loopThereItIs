@@ -100,12 +100,3 @@ public class TableUtilities {
 }
 
 
-/*        int nextValue = pos;
-        while (iterator.hasNext()) {
-            if (nextValue > -1) {
-                nextValue = (iterator.next());
-                System.out.println("Value : " + (nextValue));
-            } else {
-                break;
-            }
-        }*/
