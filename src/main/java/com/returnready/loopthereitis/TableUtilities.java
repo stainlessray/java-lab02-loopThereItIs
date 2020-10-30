@@ -9,11 +9,30 @@ public class TableUtilities {
         ArrayList<Integer> indexes = new ArrayList<>();
         int valueCount = width * width;
         String d = "|";
-        for (int i = 1; i <= width; i++) {
-            indexes.add(i);
+        for (int i = 0; i <= width; ++i) {
+            if (i >= 0) {
+                indexes.add(i);
+            }
+
+            int j = 0;
+            int myDigit = j * i;
+            for (j = indexes.get(0); j <= width; j++) {
+                if (j > 0) {
+                    myDigit = j * i;
+                    if (myDigit >= 1) {
+                        matrix.add(myDigit);
+                    }
+                }
+            }
         }
-        System.out.printf(String.valueOf(indexes));
-        //System.out.println(d + width + d + "by" + d + width + d + "Small" + d + valueCount + d);
+
+        // now write it to screen
+        // * loop through indexes as parent
+        System.out.printf(String.valueOf(indexes.size() + "\n"));
+        System.out.printf(String.valueOf(indexes + "\n"));
+
+        System.out.printf(String.valueOf(matrix.size() + "\n"));
+        System.out.printf(String.valueOf(matrix + "\n"));
         return null;
     }
 
@@ -22,13 +41,32 @@ public class TableUtilities {
         ArrayList<Integer> indexes = new ArrayList<>();
         int valueCount = width * width;
         String d = "|";
-        //System.out.println(d + width + d + "by" + d + width + d + "Small" + d + valueCount + d);
-        // loop 1 thru width writing each value to arraylist indexes
-        for (int i = 1; i <= width; i++) {
-            indexes.add(i);
+        for (int i = 0; i <= width; ++i) {
+            if (i >= 0) {
+                indexes.add(i);
+            }
+
+            int j = 0;
+            int myDigit = j * i;
+            for (j = indexes.get(0); j <= width; j++) {
+                if (j > 0) {
+                    myDigit = j * i;
+                    if (myDigit >= 1) {
+                        matrix.add(myDigit);
+                    }
+                }
+            }
         }
-        System.out.printf(String.valueOf(indexes));
+
+        // now write it to screen
+        // * loop through indexes as parent
+        System.out.printf(String.valueOf(indexes.size() + "\n"));
+        System.out.printf(String.valueOf(indexes + "\n"));
+
+        System.out.printf(String.valueOf(matrix.size() + "\n"));
+        System.out.printf(String.valueOf(matrix + "\n"));
         return null;
+
     }
 
 
@@ -61,7 +99,9 @@ public class TableUtilities {
 
         System.out.printf(String.valueOf(matrix.size() + "\n"));
         System.out.printf(String.valueOf(matrix + "\n"));
-
+        return null;
+    }
+}
        /* what this
             writes
         21
@@ -89,8 +129,5 @@ public class TableUtilities {
                 20, 40, 60, 80, 100, 120, 140, 160, 180, 200, 220, 240, 260, 280, 300, 320, 340, 360, 380, 400]
 */
 
-        return null;
-    }
-}
 
 
