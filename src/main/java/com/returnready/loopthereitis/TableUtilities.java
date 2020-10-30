@@ -41,15 +41,12 @@ public class TableUtilities {
             if (i >= 0) {
                 indexes.add(i);
             }
+
             int j = 0;
             int myDigit = j * i;
             for (j = indexes.get(0); j <= width; j++) {
                 if (j > 0) {
-                    //System.out.printf("i" + i + "\n");
-                    //System.out.printf("j" + j + "\n");
                     myDigit = j * i;
-                    // if myDigit > 2 write to matrix
-                    // array "i" naming
                     if (myDigit >= 1) {
                         matrix.add(myDigit);
                     }
@@ -59,9 +56,6 @@ public class TableUtilities {
 
         // now write it to screen
         // * loop through indexes as parent
-
-          // * nest loop through matrix values for length of array
-          // * index 0 thru length
         System.out.printf(String.valueOf(indexes.size() + "\n"));
         System.out.printf(String.valueOf(indexes + "\n"));
 
