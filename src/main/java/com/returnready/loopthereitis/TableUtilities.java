@@ -37,32 +37,31 @@ public class TableUtilities {
         ArrayList<Integer> indexes = new ArrayList<>();
         int valueCount = width * width;
         String d = "|";
-        for (int i = 0; i <= width; ++i) {
-            indexes.add(i);
+        for (int i = 0; i <= width-1; i++) {
+            if (i >= 0) {
+                indexes.add(i+1);
+            }
             int j = 0;
             int myDigit = j * i;
-            for (j = indexes.get(i); j <= width; ++j){
-                if (i > 0){
-                    System.out.printf("i" + i + "\n");
-                    System.out.printf("j" + j + "\n");
+            for (j = indexes.get(i); j <= width; ++j) {
+                if (j > 0) {
+                    //System.out.printf("i" + i + "\n");
+                    //System.out.printf("j" + j + "\n");
                     myDigit = j * i;
-                    // if myDigit > 1 write to array list
+                    // if myDigit > 2 write to matrix
                     // array "i" naming
-                    if (myDigit >=2) {
+                    if (myDigit >= 2) {
                         matrix.add(myDigit);
-                        System.out.printf(" In Loop myDigit: " + myDigit + "\n");
+                        //System.out.printf(" In Loop myDigit: " + myDigit + "\n");
                     }
                 }
-                // loop each value of indexes array (width) times
-        // int pos = String.valueOf(indexes.indexOf(0));
+            }
+            //System.out.printf("Out of loop myDigit: " + myDigit + "\n");
         }
-        System.out.printf("Out of loop myDigit: " + myDigit + "\n");
-
-        }
-        //System.out.println(d + width + d + "by" + d + width + d + "Full" + valueCount + d);
-        //System.out.printf(String.valueOf(indexes + "\n"));
         System.out.printf(String.valueOf(indexes + "\n"));
         System.out.printf(String.valueOf(matrix + "\n"));
+        // now write it to screen
+
         return null;
 
 
