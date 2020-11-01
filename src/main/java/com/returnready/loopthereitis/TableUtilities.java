@@ -21,7 +21,6 @@ public class TableUtilities {
                     if (myDigit >= 1) {
                         concatLine = String.format(concatLine + "%3d |", myDigit);
                         if (j == width) {
-                            //concatLine = concatLine.substring(0, concatLine.length() - 1);
                             concatLine = concatLine + "\n";
                         }
                     }
@@ -48,7 +47,6 @@ public class TableUtilities {
                     if (myDigit >= 1) {
                         concatLine = String.format(concatLine + "%3d |", myDigit);
                         if (j == width) {
-                            //concatLine = concatLine.substring(0, concatLine.length() - 1);
                             concatLine = concatLine + "\n";
                         }
                     }
@@ -77,7 +75,6 @@ public class TableUtilities {
                     if (myDigit >= 1) {
                         concatLine = String.format(concatLine + "%3d |", myDigit);
                         if (j == width) {
-                            //concatLine = concatLine.substring(0, concatLine.length() - 1);
                             concatLine = concatLine + "\n";
                         }
                     }
