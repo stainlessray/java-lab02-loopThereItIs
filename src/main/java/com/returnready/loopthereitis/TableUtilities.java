@@ -14,7 +14,7 @@ public class TableUtilities {
             if (i >= 0) {
                 indexes.add(i);}
             int j = 0;
-            int myDigit = j * i;
+            int myDigit;
             for (j = indexes.get(0); j <= width; j++) {
                 if (j > 0) {
                     myDigit = j * i;
@@ -40,7 +40,7 @@ public class TableUtilities {
             if (i >= 0) {
                 indexes.add(i);}
             int j = 0;
-            int myDigit = j * i;
+            int myDigit;
             for (j = indexes.get(0); j <= width; j++) {
                 if (j > 0) {
                     myDigit = j * i;
@@ -54,7 +54,6 @@ public class TableUtilities {
             }
         }
         return concatLine;
-
     }
 
 
@@ -68,7 +67,7 @@ public class TableUtilities {
             if (i >= 0) {
                 indexes.add(i);}
             int j = 0;
-            int myDigit = j * i;
+            int myDigit;
             for (j = indexes.get(0); j <= width; j++) {
                 if (j > 0) {
                     myDigit = j * i;
