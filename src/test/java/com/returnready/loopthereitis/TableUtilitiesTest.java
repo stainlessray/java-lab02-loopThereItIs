@@ -24,7 +24,7 @@ public class TableUtilitiesTest {
                 " 10 | 20 | 30 | 40 | 50 | 60 | 70 | 80 | 90 |100 |\n";
 
         // : When
-        String actual = TableUtilities.getLargeMultiplicationTable(width);
+        String actual = TableUtilities.getMultiplicationTable(width);
         // : Then
         Assert.assertEquals(expected, actual);
     }
@@ -40,7 +40,7 @@ public class TableUtilitiesTest {
                         "  4 |  8 | 12 | 16 | 20 |\n" +
                         "  5 | 10 | 15 | 20 | 25 |\n";
 
-        String actual = TableUtilities.getSmallMultiplicationTable(width);
+        String actual = TableUtilities.getMultiplicationTable(width);
         Assert.assertEquals(expected, actual);
     }
 
