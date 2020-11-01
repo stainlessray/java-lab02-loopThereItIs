@@ -5,10 +5,7 @@ import java.util.ListIterator;
 
 public class TableUtilities {
     public static String getSmallMultiplicationTable(int width) {
-        ArrayList<Integer> matrix = new ArrayList<>();
         ArrayList<Integer> indexes = new ArrayList<>();
-        int valueCount = width * width;
-        String d = "|";
         String concatLine = "";
         for (int i = 0; i <= width; ++i) {
             if (i >= 0) {
@@ -31,10 +28,7 @@ public class TableUtilities {
     }
 
     public static String getLargeMultiplicationTable(int width) {
-        ArrayList<Integer> matrix = new ArrayList<>();
         ArrayList<Integer> indexes = new ArrayList<>();
-        int valueCount = width * width;
-        String d = "|";
         String concatLine = "";
         for (int i = 0; i <= width; ++i) {
             if (i >= 0) {
@@ -57,11 +51,9 @@ public class TableUtilities {
     }
 
 
+
     public static String getMultiplicationTable(int width) {
-        ArrayList<Integer> matrix = new ArrayList<>();
         ArrayList<Integer> indexes = new ArrayList<>();
-        int valueCount = width * width;
-        String d = "|";
         String concatLine = "";
         for (int i = 0; i <= width; ++i) {
             if (i >= 0) {
