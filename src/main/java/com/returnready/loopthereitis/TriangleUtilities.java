@@ -17,8 +17,6 @@ public class TriangleUtilities {
             }
 
         }
-        System.out.println(concatLine);
-
         return concatLine.substring(1);
     }
 
