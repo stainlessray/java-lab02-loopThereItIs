@@ -4,8 +4,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 
-
-
 public class TableUtilitiesTest {
     @Test
     public void testGetLargeMultiplicationTable() {
@@ -24,7 +22,7 @@ public class TableUtilitiesTest {
                 " 10 | 20 | 30 | 40 | 50 | 60 | 70 | 80 | 90 |100 |\n";
 
         // : When
-        String actual = TableUtilities.getMultiplicationTable(width);
+        String actual = TableUtilities.getLargeMultiplicationTable(width);
         // : Then
         Assert.assertEquals(expected, actual);
     }
@@ -40,7 +38,7 @@ public class TableUtilitiesTest {
                         "  4 |  8 | 12 | 16 | 20 |\n" +
                         "  5 | 10 | 15 | 20 | 25 |\n";
 
-        String actual = TableUtilities.getMultiplicationTable(width);
+        String actual = TableUtilities.getSmallMultiplicationTable(width);
         Assert.assertEquals(expected, actual);
     }
 

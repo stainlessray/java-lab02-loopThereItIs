@@ -50,8 +50,6 @@ public class TableUtilities {
         return concatLine;
     }
 
-
-
     public static String getMultiplicationTable(int width) {
         ArrayList<Integer> indexes = new ArrayList<>();
         String concatLine = "";
